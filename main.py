@@ -6,3 +6,4 @@ numbers.reverse()
 print(numbers)
 
 print('Hello git!')
+# Проверка на РЕР8
