@@ -22,5 +22,5 @@ while True:
             print("Error you can't divide by '0'")
     choice_1 = input("If you want to continue, enter y or yes: ")
     if choice_1 not in ['y', 'yes']:
-        print("Calculator stopped.")
+        print("Calculator stopped ")
         break
