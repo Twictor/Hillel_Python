@@ -20,7 +20,7 @@ while True:
             print("resultat = ", resultat)
         else:
             print("Error you can't divide by '0'")
-    choice_1 = input("If you want to continue, enter y or n: ")
-    if choice_1 != 'y':
-        print("Calculator stop")
+    choice_1 = input("If you want to continue, enter y or yes: ")
+    if choice_1 not in ['y', 'yes']:
+        print("Calculator stopped.")
         break
