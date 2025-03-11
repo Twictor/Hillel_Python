@@ -31,7 +31,13 @@ class Purchase:
         self.products[item] = cnt
 
     def __str__(self):
-        items_str = "\n".join(f"{item}: {cnt} pcs." for item, cnt in self.products.items())
+        lines = []
+        for item, cnt in self.products.items():
+            line = f"{item.name}: {cnt} pcs."
+            lines.append(line)
+
+        items_str = "\n".join(lines)
+
         return f"User: {self.user}\nItems:\n{items_str}"
 
     def get_total(self):
