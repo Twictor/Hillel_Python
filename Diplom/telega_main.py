@@ -40,9 +40,5 @@ def search(message):
             response = "Нічого не знайдено"
         bot.send_message(message.chat.id, response)
 
-# @bot.message_handler(func=lambda message: True)
-# def echo_all(message):
-#     print(f"Отримано повідомлення: {message.text}")
-#     bot.send_message(message.chat.id, f"Ви написали: {message.text}")
 
 bot.polling()
