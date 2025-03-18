@@ -1,0 +1,82 @@
+[
+    {
+        "first_name": "Иванов",
+        "last_name": "Иван",
+        "patronymic": "Иванович",
+        "birth_date": "15.03.1990",
+        "death_date": null,
+        "gender": null
+    },
+    {
+        "first_name": "Олена",
+        "last_name": "Яківна",
+        "patronymic": "Іванівна",
+        "birth_date": "12.03.1985",
+        "death_date": null,
+        "gender": null
+    },
+    {
+        "first_name": "Олена",
+        "last_name": "Яківна",
+        "patronymic": "Іванівна",
+        "birth_date": "03.02.2000",
+        "death_date": "12.03.1985",
+        "gender": null
+    },
+    {
+        "first_name": "Олена",
+        "last_name": "Оленівна",
+        "patronymic": "Іванівна",
+        "birth_date": "03.02.2000",
+        "death_date": "12.03.1985",
+        "gender": "f"
+    },
+    {
+        "first_name": "Олена",
+        "last_name": "Яківна",
+        "patronymic": "Іванівна",
+        "birth_date": "03.02.2000",
+        "death_date": null,
+        "gender": "f"
+    },
+    {
+        "first_name": "Олег",
+        "last_name": "Іванович",
+        "patronymic": "Іванов",
+        "birth_date": "03.02.2000",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Олег",
+        "last_name": "Іванович",
+        "patronymic": "Іванов",
+        "birth_date": "03.02.2000",
+        "death_date": "22.06.2025",
+        "gender": "m"
+    },
+    {
+        "first_name": "Олег",
+        "last_name": "Іванович",
+        "patronymic": "Іванов",
+        "birth_date": "03.02.2000",
+        "death_date": "22.06.2025",
+        "gender": "m"
+    },
+    {
+        "first_name": "Олег",
+        "last_name": "Іванович",
+        "patronymic": "Іванов",
+        "birth_date": "03.02.2000",
+        "death_date": "22.06.2025",
+        "gender": "m"
+    },
+    {
+        "first_name": "Лариса",
+        "last_name": "Лариса",
+        "patronymic": "Ларисовна",
+        "birth_date": "20.01.2001",
+        "death_date": null,
+        "gender": "f"
+    }
+]
