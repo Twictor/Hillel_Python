@@ -2,7 +2,6 @@ import re
 import json
 from datetime import datetime
 
-
 class Person:
     DATE_FORMATS = ["%d.%m.%Y", "%d %m %Y", "%d/%m/%Y", "%d-%m-%Y"]
 
