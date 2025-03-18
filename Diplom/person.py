@@ -15,14 +15,13 @@ class Person:
         self.patronymic = patronymic.capitalize() if patronymic else None
         self.birth_date = self.parse_date(birth_date)
 
-        # Проверяем, является ли переданный параметр death_date датой, а не полом
         if death_date and re.match(r"^\d{2}[-./]\d{2}[-./]\d{4}$", death_date):
             self.death_date = self.parse_date(death_date)
             self.gender = gender.lower() if gender in ["m", "f"] else None
         else:
             self.death_date = None
             self.gender = death_date.lower() if death_date in ["m",
-                                                               "f"] else None  # Если нет даты смерти, значит это пол
+                                                               "f"] else None
 
     def parse_date(self, date_str):
         if not date_str:  # Если пустая строка или None, просто вернуть None
