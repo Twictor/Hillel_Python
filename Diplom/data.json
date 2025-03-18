@@ -78,5 +78,13 @@
         "birth_date": "20.01.2001",
         "death_date": null,
         "gender": "f"
+    },
+    {
+        "first_name": "Іван",
+        "last_name": "Іванович",
+        "patronymic": "Іваненко",
+        "birth_date": "12.02.1986",
+        "death_date": null,
+        "gender": "m"
     }
 ]
