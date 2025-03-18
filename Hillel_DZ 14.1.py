@@ -57,7 +57,8 @@ class Group:
         return f'Number:{self.number}\n{all_students}'
 
 
-# Приклад використання
+
+
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
 st3 = Student('Male', 22, 'John', 'Doe', 'AN146')
