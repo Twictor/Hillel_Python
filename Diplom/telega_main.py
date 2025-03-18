@@ -2,7 +2,7 @@ import telebot
 from data_manager import DataManager
 from person import Person
 
-TOKEN = "8037728324:AAG4pET61SMptKMEG68Z4TJCWImTdGMpMaw"  # Замініть на ВАШ РЕАЛЬНИЙ ТОКЕН!!!
+TOKEN = "8037728324:AAG4pET61SMptKMEG68Z4TJCWImTdGMpMaw"
 
 bot = telebot.TeleBot(TOKEN)
 db = DataManager()
@@ -17,11 +17,12 @@ def send_welcome(message):
                                       "/list - Переглянути всі записи\n"
                                       "/help - Довідка")
 
+
 @bot.message_handler(commands=['add'])
 def add_person(message):
     bot.send_message(message.chat.id, "Введіть дані в одному рядку, розділяючи їх комами:\n"
                                       "ПІБ, дата народження, дата смерті (або -), стать (m/f/ч/ж/...)\n"
-                                       "Приклад: Іван Іваненко, 10.10.1990, -, m")
+                                      "Приклад: Іван Іваненко, 10.10.1990, -, m")
     bot.register_next_step_handler(message, process_add)
 
 
@@ -29,28 +30,26 @@ def process_add(message):
     chat_id = message.chat.id
     try:
         data = message.text.split(',')
-        if len(data) < 4:  #Мінімальна кількість параметрів
-           raise ValueError("Недостатньо даних. Потрібно мінімум 4 параметри (ПІБ, дата народження, дата смерті, стать).")
+        if len(data) < 4:
+            raise ValueError(
+                "Недостатньо даних. Потрібно мінімум 4 параметри (ПІБ, дата народження, дата смерті, стать).")
 
         # Обробка ПІБ
         name_parts = data[0].strip().split()
-        if not name_parts: #якщо ПІБ пусте
+        if not name_parts:
             raise ValueError("ПІБ не може бути пустим.")
         first_name = name_parts[0]
         last_name = name_parts[1] if len(name_parts) > 1 else None
         patronymic = name_parts[2] if len(name_parts) > 2 else None
 
-        # Обробка дати народження
         birth_date = data[1].strip()
         if birth_date == "-":
             birth_date = None
 
-        # Обробка дати смерті
         death_date = data[2].strip()
         if death_date == "-":
             death_date = None
 
-        # Обробка статі
         gender = data[3].strip()
         if gender == "-":
             gender = None

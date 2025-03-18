@@ -13,7 +13,6 @@ class DataManager:
         try:
             with open(self.file_path, "r", encoding="utf-8") as file:
                 data = json.load(file)
-                # Важлива перевірка на структуру даних
                 if isinstance(data, list):
                     return [Person.from_dict(p) for p in data]
                 else:
@@ -46,5 +45,5 @@ class DataManager:
                 results.append(person)
         return results
 
-    def get_all_people(self):  # Додано метод для отримання всіх записів
+    def get_all_people(self):
         return self.people

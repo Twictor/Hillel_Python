@@ -63,7 +63,7 @@ class Person:
             gender=data.get("gender")
         )
 
-    def __str__(self):  # метод для зручного представлення
+    def __str__(self):
         parts = [self.first_name]
         if self.last_name:
             parts.append(self.last_name)
