@@ -49,6 +49,7 @@ class Group:
                 return students
         return None
 
+
     def __str__(self):
         all_students = ''
         for student in self.group:
