@@ -96,5 +96,5 @@ def process_search(message):
         bot.send_message(chat_id, "Нічого не знайдено.")
 
 
-print("Бот запущено...")
+print("Бот запущено....")
 bot.polling()
