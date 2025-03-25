@@ -35,7 +35,7 @@ def process_add(message):
             raise ValueError(
                 "Недостатньо даних. Потрібно мінімум 4 параметри (ПІБ, дата народження, дата смерті, стать).")
 
-        # Обробка ПІБ
+
         name_parts = data[0].strip().split()
         if not name_parts:
             raise ValueError("ПІБ не може бути пустим.")
