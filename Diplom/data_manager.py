@@ -2,6 +2,7 @@ import json
 import os
 from person import Person
 
+
 class DataManager:
     def __init__(self, file_path="data.json"):
         self.file_path = file_path
@@ -23,7 +24,6 @@ class DataManager:
             print(f"Помилка завантаження даних: {e}. Починаємо з порожнього списку.")
             return []
 
-
     def save_data(self):
         try:
             with open(self.file_path, "w", encoding="utf-8") as file:
@@ -40,8 +40,8 @@ class DataManager:
         results = []
         for person in self.people:
             if (query in person.first_name.lower() or
-                (person.last_name and query in person.last_name.lower()) or
-                (person.patronymic and query in person.patronymic.lower())):
+                    (person.last_name and query in person.last_name.lower()) or
+                    (person.patronymic and query in person.patronymic.lower())):
                 results.append(person)
         return results
 

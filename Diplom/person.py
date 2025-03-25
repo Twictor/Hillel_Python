@@ -1,4 +1,4 @@
-import re
+import datetime
 from datetime import datetime
 
 
@@ -13,24 +13,25 @@ class Person:
         self.last_name = last_name.strip().capitalize() if last_name else None
         self.patronymic = patronymic.strip().capitalize() if patronymic else None
         self.birth_date = self._parse_date(birth_date)
-        self.death_date = self._parse_date(death_date)  # Parse even if None
+        self.death_date = self._parse_date(death_date)
         self.gender = self._validate_gender(gender)
 
     def _parse_date(self, date_str):
         if not date_str:
             return None
+        last_error = None
         for fmt in self.DATE_FORMATS:
             try:
                 return datetime.strptime(date_str, fmt).date()
-            except ValueError:
-                pass
-        raise ValueError(
-            f"Невірний формат дати: {date_str}.  Спробуйте формати: дд.мм.рррр, дд мм рррр, дд/мм/рррр, дд-мм-рррр")
+            except ValueError as e:
+                last_error = e
+        raise ValueError(f"Невірний формат або неіснуюча дата: {date_str}. "
+                         f"Спробуйте формати: дд.мм.рррр, дд мм рррр, дд/мм/рррр, дд-мм-рррр") from last_error
 
     def _validate_gender(self, gender):
-        if gender is None: return None  # Allow None for gender
+        if gender is None: return None
         gender = gender.lower()
-        if gender in ["m", "f", "ч", "ж", "male", "female", "man", "woman"]:  # розширено список можливих значень
+        if gender in ["m", "f", "ч", "ж", "male", "female", "man", "woman"]:
             return "m" if gender in ["m", "ч", "male", "man"] else "f"
         raise ValueError("Невірна стать. Вкажіть 'm', 'f', 'ч', 'ж', 'male', 'female', 'man' або 'woman'.")
 
@@ -39,7 +40,7 @@ class Person:
             return None
         end_date = self.death_date or datetime.now().date()
         age = end_date.year - self.birth_date.year - (
-                    (end_date.month, end_date.day) < (self.birth_date.month, self.birth_date.day))
+                (end_date.month, end_date.day) < (self.birth_date.month, self.birth_date.day))
         return age
 
     def to_dict(self):
@@ -74,7 +75,14 @@ class Person:
         age_str = f"{age} років" if age is not None else "вік невідомий"
         gender_str = {"m": "чоловік", "f": "жінка"}.get(self.gender, "стать не вказана")
 
-        birth_date_str = f"Народився: {self.birth_date.strftime('%d.%m.%Y')}" if self.birth_date else ""
-        death_date_str = f"Помер: {self.death_date.strftime('%d.%m.%Y')}" if self.death_date else ""
+        if self.gender == "f":
+            birth_label = "Народилася"
+            death_label = "Померла"
+        else:
+            birth_label = "Народився"
+            death_label = "Помер"
+
+        birth_date_str = f"{birth_label}: {self.birth_date.strftime('%d.%m.%Y')}" if self.birth_date else ""
+        death_date_str = f"{death_label}: {self.death_date.strftime('%d.%m.%Y')}" if self.death_date else ""
 
         return f"{' '.join(parts)}, {age_str}, {gender_str}. {birth_date_str}. {death_date_str}."

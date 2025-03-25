@@ -86,5 +86,165 @@
         "birth_date": "12.02.1986",
         "death_date": null,
         "gender": "m"
+    },
+    {
+        "first_name": "Аксенов",
+        "last_name": "Денис",
+        "patronymic": "Юрьевич",
+        "birth_date": "23.11.1987",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Продан",
+        "last_name": "Александр",
+        "patronymic": null,
+        "birth_date": "20.07.1971",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Такошо",
+        "last_name": "Хочишь",
+        "patronymic": null,
+        "birth_date": "26.05.1966",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Акинфиева",
+        "last_name": "Ирина",
+        "patronymic": "Николаевна",
+        "birth_date": "01.02.1963",
+        "death_date": null,
+        "gender": "f"
+    },
+    {
+        "first_name": "Головин",
+        "last_name": "Андрей",
+        "patronymic": "Вячеславович",
+        "birth_date": null,
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Долгая",
+        "last_name": "Наталья",
+        "patronymic": "Владимировна",
+        "birth_date": "22.11.1963",
+        "death_date": null,
+        "gender": "f"
+    },
+    {
+        "first_name": "Долгая",
+        "last_name": "Наталья",
+        "patronymic": "Владимировна",
+        "birth_date": "22.11.1963",
+        "death_date": "16.05.2003",
+        "gender": "f"
+    },
+    {
+        "first_name": "Кузнецов",
+        "last_name": "Денис",
+        "patronymic": "Александрович",
+        "birth_date": "04.08.1878",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Орисов",
+        "last_name": "Борис",
+        "patronymic": "Авенирович",
+        "birth_date": "05.06.1955",
+        "death_date": "08.07.2000",
+        "gender": "m"
+    },
+    {
+        "first_name": "Гандрабура",
+        "last_name": "Владислав",
+        "patronymic": "Владимирович",
+        "birth_date": null,
+        "death_date": "30.05.1955",
+        "gender": "m"
+    },
+    {
+        "first_name": "Петров",
+        "last_name": "Алексей",
+        "patronymic": "Геннадиевич",
+        "birth_date": "26.03.1985",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Богрянцев",
+        "last_name": "Владимир",
+        "patronymic": "Анатольевич",
+        "birth_date": "26.03.1975",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Богрянцев",
+        "last_name": "Владимир",
+        "patronymic": "Анатольевич",
+        "birth_date": "26.03.1975",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Беляева",
+        "last_name": "Анна",
+        "patronymic": "Михайловна",
+        "birth_date": "25.03.1975",
+        "death_date": null,
+        "gender": "f"
+    },
+    {
+        "first_name": "Тарасенко",
+        "last_name": "Оксана",
+        "patronymic": "Владимировна",
+        "birth_date": "02.02.1964",
+        "death_date": "11.10.2000",
+        "gender": "f"
+    },
+    {
+        "first_name": "Рыбин",
+        "last_name": "Вадим",
+        "patronymic": "Владимирович",
+        "birth_date": "06.08.1988",
+        "death_date": "01.02.1995",
+        "gender": "m"
+    },
+    {
+        "first_name": "Филиченко",
+        "last_name": "Михаил",
+        "patronymic": "Леонидович",
+        "birth_date": "03.09.2007",
+        "death_date": "10.10.2025",
+        "gender": "m"
+    },
+    {
+        "first_name": "Глушко",
+        "last_name": "Владимир",
+        "patronymic": "Александрович",
+        "birth_date": "01.02.1963",
+        "death_date": null,
+        "gender": "m"
+    },
+    {
+        "first_name": "Миненкова",
+        "last_name": "Анастасия",
+        "patronymic": "Александровна",
+        "birth_date": "02.02.1956",
+        "death_date": "09.09.2015",
+        "gender": "f"
+    },
+    {
+        "first_name": "Асаинов",
+        "last_name": "Ринад",
+        "patronymic": "Хасянович",
+        "birth_date": "05.06.2000",
+        "death_date": null,
+        "gender": "m"
     }
 ]

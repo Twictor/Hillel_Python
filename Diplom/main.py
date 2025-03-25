@@ -18,6 +18,7 @@ def send_welcome(message):
                                       "/help - Довідка")
 
 
+
 @bot.message_handler(commands=['add'])
 def add_person(message):
     bot.send_message(message.chat.id, "Введіть дані в одному рядку, розділяючи їх комами:\n"
