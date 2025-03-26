@@ -62,8 +62,7 @@ def process_add(message):
 
     except ValueError as e:
         bot.send_message(chat_id, f"Помилка: {e}.  Спробуйте ще раз /add.")
-    except Exception as e:
-        bot.send_message(chat_id, f"Сталася невідома помилка: {e}. Спробуйте ще раз /add")
+
 
 
 @bot.message_handler(commands=['list'])
@@ -81,7 +80,7 @@ def list_all(message):
 @bot.message_handler(commands=['search'])
 def search(message):
     chat_id = message.chat.id
-    bot.send_message(chat_id, "Введіть пошуковий запит (частина імені, прізвища, тощо):")
+    bot.send_message(chat_id, "Введіть пошуковий запит (частина імені, прізвища або побатькові):")
     bot.register_next_step_handler(message, process_search)
 
 
